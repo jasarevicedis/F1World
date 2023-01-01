@@ -1,0 +1,32 @@
+<div class="standings-nav"></div>
+<div class="standings-container" *ngIf="!driverStandingsLoading">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Pos.</th>
+            <th>Driver</th>
+            <th colspan="2">Constructor</th>
+            <th>Pts.</th>
+            <th class="hide-sm">Wins</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let driver of driverStandings[0].DriverStandings">
+            <td>{{ driver.position }}</td>
+            <td>{{ driver.Driver.familyName }}</td>
+            <!--<td [class]="driver.Constructors[0].constructorId" class="colour-team"></td>-->
+            <td>
+              {{
+                driver.Constructors[0].name === "Haas F1 Team"
+                  ? "Haas"
+                  : driver.Constructors[0].name === "Alpine F1 Team"
+                  ? "Alpine"
+                  : driver.Constructors[0].name
+              }}
+            </td>
+            <td>{{ driver.points }}</td>
+            <td>{{ driver.wins }}</td>
+          </tr>
+        </tbody>
+      </table>  
+</div>
