@@ -11,6 +11,10 @@ import { F1apiService } from './services/f1api.service';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CalendarComponent } from './pages/calendar/calendar.component';
+import { StatsComponent } from './pages/stats/stats.component';
+import { CalendarCardComponent } from './components/calendar-card/calendar-card.component';
+import { NextRaceCardComponent } from './components/next-race-card/next-race-card.component';
+import { TeamsComponent } from './pages/teams/teams.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,11 @@ import { CalendarComponent } from './pages/calendar/calendar.component';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    CalendarComponent
+    CalendarComponent,
+    StatsComponent,
+    CalendarCardComponent,
+    NextRaceCardComponent,
+    TeamsComponent
   ],
   imports: [
     BrowserModule,

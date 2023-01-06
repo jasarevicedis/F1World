@@ -10,11 +10,14 @@ export class F1apiService {
   constructor(private http: HttpClient) { }
 
   date: Date = new Date();
-  year: number = this.date.getFullYear() -1;
+  year: number = this.date.getFullYear();
 
   getDriverStandings(): Observable<any> {
     return this.http.get(
-      'https://ergast.com/api/f1/' + this.year + '/driverStandings.json'
+      'https://ergast.com/api/f1/current/driverStandings.json'
     );
+  }
+  getCalendar(): Observable<any> {
+    return this.http.get(`https://ergast.com/api/f1/2023.json`);
   }
 }

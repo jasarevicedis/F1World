@@ -1,1 +1,4 @@
-<p>calendar works!</p>
+<div class="calendar-nav"></div>
+<div class="calendar-grid">
+    <app-calendar-card *ngFor="let race of raceCalendar.Races" [race]="race"></app-calendar-card>
+</div>
